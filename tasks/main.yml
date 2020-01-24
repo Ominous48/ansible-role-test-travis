@@ -1,2 +1,4 @@
 ---
-# tasks file for test-travis
+- name: SHow debug msg
+  debug:
+    msg: It's work!
