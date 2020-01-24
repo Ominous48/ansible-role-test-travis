@@ -3,11 +3,18 @@ sudo: required
 language: python
 services:
   - docker
+
+env:
+  global:
+    - ROLE_NAME: test-travis
+
 before_install:
-  - sudo apt-get -qq update
+  - cd ../
+  - mv ansible-role-$ROLE_NAME ominous48.$ROLE_NAME
+  - cd ominous48.$ROLE_NAME
+
 install:
-  - pip install molecule
-  - pip install docker
-  # - pip install required driver (e.g. docker, python-vagrant, shade, boto, apache-libcloud)
+  - pip install molecule docker
+
 script:
   - molecule test
