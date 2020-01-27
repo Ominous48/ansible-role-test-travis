@@ -13,7 +13,8 @@ before_install:
   - mv ansible-role-$ROLE_NAME ominous48.$ROLE_NAME
   - cd ominous48.$ROLE_NAME
 
-#install:
+install:
+  - pip install tox
 #  - pip install molecule docker
 
 script:
