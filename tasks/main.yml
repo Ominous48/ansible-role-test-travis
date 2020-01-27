@@ -1,4 +1,5 @@
 ---
+
 - name: SHow debug msg
   debug:
-    msg: It's work!
+    msg: "It's work! OS is {{ ansible_distribution }}"
