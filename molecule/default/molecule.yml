@@ -6,8 +6,8 @@ driver:
 lint:
   name: yamllint
   options:
-  config-data:
-    ignore: .travis.yml
+    config-data:
+      ignore: .travis.yml
 platforms:
   - name: centos7
     image: centos:7
